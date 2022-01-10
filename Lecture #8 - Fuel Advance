@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "Kindly enter how many litres you want to fill up your car\n";
+    double lit, c;
+
+
+    std::cin >> lit;
+    //Using the cin.fail function (when user enters alphabet instead of numbers)
+    if (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Incorrect command\n: ";
+    }
+
+    else {
+        cout << "You have selected " << lit << " litres\n";
+        cout << "Kindly select the fuel type you want for your car\n";
+        cout << "Enter 'p' for Petrol\n 'd' for Diesel\n";
+        char fuel;
+        cin >> fuel;
+        switch (fuel)
+        {
+        case 'P':
+        case 'p':
+        {
+
+            cout << "You have selected Petrol for filling up your car\n ";
+           
+            c = lit * 0.8;
+            cout << "\nThe price per litres is 0.8 now the total is " << c << " AED" << endl;
+            break;
+        }
+        case 'd':
+        case 'D':
+        {
+            cout << "You have selected Diesel for filling up your car ";
+           
+            c = lit * 0.5;
+            cout << "\nThe price per litres is 0.5 now the total is " << c << " AED" << endl;
+            break;
+
+            break;
+        }
+
+        default:
+        {
+            cout << "Incorrect command";
+            break;
+        }
+
+        }
+    }
+}
