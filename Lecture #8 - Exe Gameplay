@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+		cout << "Would you like to continue? (Y/N): "; 
+		char answer; 
+		cin >> answer; 
+
+			switch (answer)
+			{ 
+			
+			case 'Y':
+			case 'y':
+			{
+				cout << "You selected yes";
+				break;
+			}
+					
+			case 'N':
+			case 'n':
+			{
+				cout << "You selected no";
+				break;
+			}
+					
+			default: 
+			{
+				cout << "incorrect command";
+			}
+
+			}
+		cin.get(); //keeps console window open in Visual Studio
+		return 0;
+	}
